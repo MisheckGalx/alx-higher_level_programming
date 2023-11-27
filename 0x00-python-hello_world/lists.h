@@ -4,16 +4,17 @@
 #include <stdlib.h>
 
 /**
- * Structure representing a node, in a linked list.
- * @n; integer value stored in the node.
- * @next; pointer to the node in the list.
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
  *
- * This structure defines the properties of a linked list node.
+ * Description: singly linked list node structure
+ *
  */
 typedef struct listint_s
 {
-  int n;
-  struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
