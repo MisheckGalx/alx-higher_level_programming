@@ -1,14 +1,14 @@
-#0x0D. SQL - Introduction
+# 0x0D. SQL - Introduction
 
 
-#Concepts
+# Concepts
 For this project, we expect you to look at these concepts:
 
-#Databases
+# Databases
 Databases
 
 
-#Resources
+# Resources
 Read or watch:
 
 What is Database & SQL?
@@ -24,7 +24,7 @@ installing MySQL in Ubuntu 20.04
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-#General
+# General
 What’s a database
 What’s a relational database
 What does SQL stand for
@@ -37,8 +37,9 @@ How to INSERT, UPDATE or DELETE data
 What are subqueries
 How to use MySQL functions
 
-#Requirements
-#General
+# Requirements
+
+# General
 Allowed editors: vi, vim, emacs
 All your files will be executed on Ubuntu 20.04 LTS using MySQL 8.0 (version 8.0.25)
 All your files should end with a new line
@@ -48,13 +49,14 @@ All SQL keywords should be in uppercase (SELECT, WHERE…)
 A README.md file, at the root of the folder of the project, is mandatory
 The length of your files will be tested using wc
 More Info
-Comments for your SQL file:
+
+# Comments for your SQL file:
 $ cat my_script.sql
 -- 3 first students in the Batch ID=3
 -- because Batch 3 is the best!
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
-Install MySQL 8.0 on Ubuntu 20.04 LTS
+# Install MySQL 8.0 on Ubuntu 20.04 LTS
 $ sudo apt update
 $ sudo apt install mysql-server
 ...
