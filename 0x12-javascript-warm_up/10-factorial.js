@@ -1,18 +1,21 @@
 #!/usr/bin/node
 
-// a script that computes and prints a factorial
+const process = require('process');
+const firstArg = process.argv[2];
+const num = parseInt(firstArg);
 
-function factorial (num) {
-  const numInt = parseInt(num);
-
-  if (isNaN(num) || numInt < 0) {
+function calcFactorial (x) {
+  if (isNaN(x)) {
     return 1;
-  } else if (numInt === 0) {
+  } else if (x === 0) {
     return 1;
   } else {
-    return numInt * factorial(numInt - 1);
+    return x * calcFactorial(x - 1);
   }
 }
 
-const result = factorial(process.argv[2]);
-console.log(result);
+if (!isNaN(num)) {
+  console.log(calcFactorial(num));
+} else {
+  console.log('1');
+}
