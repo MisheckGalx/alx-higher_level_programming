@@ -1,13 +1,11 @@
 #!/usr/bin/node
 
-// prints the addition of 2 integers
+const process = require('process');
+const firstArg = parseInt(process.argv[2]);
+const secondArg = parseInt(process.argv[3]);
 
 function add (a, b) {
-  const aNum = parseInt(a);
-  const bNum = parseInt(b);
-
-  const sum = aNum + bNum;
-  console.log(sum);
+  return a + b;
 }
 
-add(process.argv[2], process.argv[3]);
+console.log(add(firstArg, secondArg));
