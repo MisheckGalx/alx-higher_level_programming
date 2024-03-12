@@ -1,17 +1,10 @@
 #!/usr/bin/node
 
-/*
- * a class Rectangle that defines a rectangle
- */
-
-class Rectangle {
-  constructor(w, h) {
-    if (w <= 0 || h <= 0 || isNaN(w) || isNaN(h)) {
-      return {};
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (h > 0 && w > 0) {
+      this.width = w;
+      this.height = h;
     }
-
-    this.width = w;this.height = h;
   }
-}
-
-module.exports = Rectangle;
+};
