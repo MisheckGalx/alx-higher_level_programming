@@ -1,7 +1,7 @@
 # 0x13. JavaScript - Objects, Scopes and Closures
 
-#Resources
-#Read or watch:
+# Resources
+# Read or watch:
 
 JavaScript object basics
 Object-oriented JavaScript (read all examples!)
@@ -13,10 +13,10 @@ Inheritance in JavaScript
 Closures
 this/self
 Modern JS
-#Learning Objectives
+# Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-#General
+# General
 Why JavaScript programming is amazing
 How to create an object in JavaScript
 What this means
@@ -26,9 +26,9 @@ What is a closure
 What is a prototype
 How to inherit an object from another
 
-#Requirements
+# Requirements
 
-#General
+# General
 Allowed editors: vi, vim, emacs
 All your files will be interpreted on Ubuntu 20.04 LTS using node (version 14.x)
 All your files should end with a new line
@@ -42,8 +42,7 @@ More Info
 Install Node 14
 ````
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-```
+$ sudo apt-get install -y nodejs`
 Install semi-standard
 Documentation
 
