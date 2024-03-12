@@ -21,7 +21,6 @@ class SquareWithCharPrint extends Square {
     }
   }
 }
-
 const s1 = new SquareWithCharPrint(4);
 console.log('Print with default character:');
 s1.charPrint();
