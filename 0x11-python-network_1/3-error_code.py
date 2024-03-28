@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""Using urllib to send a request"""
+"""using urllib to send a request"""
 
 import sys
 from urllib import request, error
 
+
 if __name__ == "__main__":
-    # Check the URL from the command line argument
+    # Get the URL from the command line
     url = sys.argv[1]
 
     try:
         # Make a GET request to the URL
         with request.urlopen(url) as response:
-            response_body = response.read().decode('utf-8')
-			print(response_body)
+            # Read and decode the response body
+            print(response.read().decode('utf-8'))
 
     except error.HTTPError as e:
+        # Handle HTTP errors and print the HTTP status code
         print("Error code: {}".format(e.code))
