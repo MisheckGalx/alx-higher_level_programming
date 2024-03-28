@@ -3,20 +3,22 @@
 import urllib.request
 
 if __name__ == "__main__":
+    """
+    Fetches the status from https://alx-intranet.hbtn.io/status
+    """
 
-# This script fetches information from https://alx-intranet.hbtn.io/status
+    # URL to fetch status from
+    url = "https://alx-intranet.hbtn.io/status"
 
-import urllib.request
+    # Fetching the status
+    with urllib.request.urlopen(url) as response:
+        resp = response.read()
 
-# The URL we want to fetch data from
-url = 'https://alx-intranet.hbtn.io/status'
+        url_type = type(resp)
+        html = resp.decode("UTF-8")
 
-req = urllib.request.Request(url)
-with urllib.request.urlopen(req) as response:
-    content = response.read()
-
-# fetched information in a formatted manner
-print("Body response:")
-print("\t- type:", type(content))
-print("\t- content:", content)
-print("\t- utf8 content:", content.decode('utf-8'))
+        # Printing the fetched information
+        print("Body response:")
+        print("\t- type: {}".format(url_type))
+        print("\t- content: {}".format(resp))
+        print("\t- utf8 content: {}".format(html))
