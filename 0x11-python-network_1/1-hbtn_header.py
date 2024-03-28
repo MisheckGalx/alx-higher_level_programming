@@ -1,15 +1,19 @@
 #!/usr/bin/python3
-"""1-hbtn_header module"""
+"""Using urllib to send requests"""
 
 import sys
 from urllib import request
 
 if __name__ == "__main__":
-    # Obtain the URL from the command-line argument
+
+    # URL from the command-line argument
     url = sys.argv[1]
 
-    req = urllib.request.Request(url)
-
-    # Request to the URL and retrieve the response
+    # GET request to the URL
     with request.urlopen(url) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+        response_headers = dict(response.headers)
+
+        # Get the X-Request-Id header from the response headers
+        x_request_id = response_headers.get("X-Request-Id")
+        if x_request_id:
+            print(x_request_id)
