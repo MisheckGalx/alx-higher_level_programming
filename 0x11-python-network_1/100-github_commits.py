@@ -10,7 +10,8 @@ if __name__ == "__main__":
     owner_name = sys.argv[2]
 
     # GitHub API URL for fetching commits
-	url = f'https://api.github.com/repos/{owner_name}/{repository_name}/commits'
+	url = f'https://api.github.com/repos/{owner_name}/{
+	repository_name}/commits'
 
 	# Limit the number of commits per page
     params = {'per_page': 10}
