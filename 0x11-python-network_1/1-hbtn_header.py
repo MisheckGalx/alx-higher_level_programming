@@ -11,5 +11,5 @@ if __name__ == "__main__":
     req = urllib.request.Request(url)
 
     # Request to the URL and retrieve the response
-    with urllib.request.urlopen(req) as response:
-        x_request_id = response.getheader("X-Request-Id")
+    with request.urlopen(url) as response:
+        print(dict(response.headers).get("X-Request-Id"))
