@@ -2,14 +2,9 @@
 """1-hbtn_header module"""
 
 import sys
-import urllib.request
+from urllib import request
 
 if __name__ == "__main__":
-    """
-     This script retrieves the value of the X-Request-Id
-    header from the response of a given URL.
-	"""
-
     # Obtain the URL from the command-line argument
     url = sys.argv[1]
 
