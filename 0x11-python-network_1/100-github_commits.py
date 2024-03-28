@@ -1,23 +1,26 @@
 #!/usr/bin/python3
-"""Fetches the latest commits from a GitHub repository"""
+"""Using the GitHub API to list commits"""
 
 import sys
 import requests
 
 if __name__ == "__main__":
+    # Repository name and owner name from the command-line
+    repository_name = sys.argv[1]
+    owner_name = sys.argv[2]
 
-    # Obtain repository owner and name from command-line arguments
-    repository_owner = sys.argv[1]
-    repository_name = sys.argv[2]
+    # GitHub API URL for fetching commits
+    url =f'https://api.github.com/repos/{owner_name}/{repository_name}/commits'
 
-	# URL to fetch commits from the GitHub API
-    url = "https://api.github.com/repos/{}/{}/commits".format(
-			repository_owner, repository_name)
+	# Limit the number of commits per page
+    params = {'per_page': 10}
 
-    response = requests.get(url)
+    # GET request to the GitHub API
+    response = requests.get(url, params=params)
     commits = response.json()
 
-    for i, commit in enumerate(commits[:10]):
-        sha = commit.get("sha")
-        author_name = commit.get("commit").get("author").get("name")
-        print("{}: {}".format(sha, author_name))
+    # Commits and print the SHA and author name of each commit
+    for commit in commits:
+        sha = commit['sha']
+        author_name = commit['commit']['author']['name']
+        print(f"{sha}: {author_name}")
