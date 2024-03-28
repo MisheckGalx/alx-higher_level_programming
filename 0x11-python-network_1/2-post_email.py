@@ -14,6 +14,7 @@ if __name__ == "__main__":
     email_address = sys.argv[2]
 
     values = {'email': email_address}
+
     data = urllib.parse.urlencode(values)
     data = data.encode("ascii")
 
