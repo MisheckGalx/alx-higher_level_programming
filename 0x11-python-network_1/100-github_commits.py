@@ -10,16 +10,14 @@ if __name__ == "__main__":
     owner_name = sys.argv[2]
 
     # GitHub API URL for fetching commits
-	url = 'https://api.github.com/repos/{owner_name}/{repository_name}/commits'
+    url = f'https://api.github.com/repos/{owner_name}/{repository_name}/commits'
 
-	# Limit the number of commits per page
+    # Limit the number of commits per page
     params = {'per_page': 10}
-
-    # GET request to the GitHub API
     response = requests.get(url, params=params)
-    commits = response.json()
 
-    # Commits and print the SHA and author name of each commit
+    # JSON response into a list of commits
+    commits = response.json()
     for commit in commits:
         sha = commit['sha']
         author_name = commit['commit']['author']['name']
