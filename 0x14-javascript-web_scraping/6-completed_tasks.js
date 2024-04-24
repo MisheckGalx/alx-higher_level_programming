@@ -1,31 +1,28 @@
-!/usr/bin/node
-// 6-completed_tasks.js
+#!/usr/bin/node
 
-// computes the number of tasks completed by user id
+// import the module
 const request = require('request');
-const processArgv = require('process').argv;
 
-request(processArgv[2], function (error, response, body) {
+// The first argument is the API URL
+const apiUrl = process.argv[2];
+
+const dictionary = {};
+
+// Make an HTTP GET request to the API URL
+request(apiUrl, function (error, response, body) {
   if (error) {
-    console.error('Error:', error);
-    return;
-  }
-
-  if (response.statusCode === 200) {
-    const responseData = JSON.parse(body);
-    const taskCompleted = {};
-
-    for (let i = 0; i < responseData.length; i++) {
-      const task = responseData[i];
-
-      if (task.completed === true) {
-        if (task.userId in taskCompleted) {
-          taskCompleted[task.userId]++;
-        } else {
-          taskCompleted[task.userId] = 1;
+    console.error(error);
+  } else {
+    const data = JSON.parse(body);
+    data.forEach(function (result) {
+      if (result.completed === true) {
+        const userid = result.userId;
+        if (!(userid in dictionary)) {
+          dictionary[userid] = 0;
         }
+        dictionary[userid] += 1;
       }
-    }
-    console.log(taskCompleted);
+    });
+    console.log(dictionary);
   }
 });
