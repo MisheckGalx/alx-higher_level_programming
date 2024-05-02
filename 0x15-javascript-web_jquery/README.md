@@ -1,24 +1,10 @@
 # 0x15. JavaScript - Web jQuery
 
-Curriculum
-SE Foundations
-Average: 127.23%
-You just released the advanced tasks of this project. Have fun!
-0x15. JavaScript - Web jQuery
-Front-end
-JavaScript
- Weight: 1
- Project will start May 2, 2024 5:00 AM, must end by May 3, 2024 5:00 AM
- Manual QA review must be done (request it when you are done with the project)
-Concepts
-For this project, we expect you to look at these concepts:
+# Curriculum
+# SE Foundations
 
-JavaScript in the browser
-Dealing with data statically versus dynamically
-
-
-Resources
-Read or watch:
+# Resources
+# Read or watch:
 
 What is JavaScript?
 Selector
@@ -33,10 +19,10 @@ What went wrong? Troubleshooting JavaScript
 JQuery
 JQuery API
 JQuery Ajax
-Learning Objectives
+# Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+# General
 Why JQuery make front-end programming so easy (don’t forget to tweet today, with the hashtag #ilovejquery :))
 How to select HTML elements in JavaScript
 How to select HTML elements with JQuery
@@ -49,8 +35,8 @@ How to make a POST request with JQuery Ajax
 How to listen/bind to DOM events
 
 
-Requirements
-General
+# Requirements
+# General
 Allowed editors: vi, vim, emacs
 All your files will be interpreted on Chrome (version 57.0)
 All your files should end with a new line
